@@ -1,0 +1,19 @@
+@CHARSET "UTF-8";
+body {
+	background-color: threedface;
+}
+.body {
+	width: 100%;
+	display: inline-block;
+} 
+
+.leftPart {
+	width: 20%;
+	float: left; 
+}
+
+.rigthPart {
+	padding-left: 20px;
+	width: 80%;
+	float: left;
+}
