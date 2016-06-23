@@ -7,7 +7,7 @@
 				<c:if test="${sessionScope.userType eq 'GUEST'}">
 					<b><c:out value="Hello, guest!" /></b>	
 				</c:if>
-				<c:if test="${sessionScope.userType eq 'CLIENT' or 'ADMIN'}">
+				<c:if test="${(sessionScope.userType eq 'ADMIN') or (sessionScope.userType eq 'CLIENT')}">
 					<b><span class="glyphicon glyphicon-user" aria-hidden="true"></span> Hello, ${sessionScope.userLogin}!</b>
 				</c:if>
 		  	</div>
