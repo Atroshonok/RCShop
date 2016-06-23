@@ -2,11 +2,11 @@ function checkEnteredData(inputID) {
 	var pattern = null;
 
 	switch (inputID) {
-	case 'login':
+	case 'regLogin':
 		pattern = new RegExp('^[a-zA-Z0-9]{6,45}$', '');
 		break;
 
-	case 'password':
+	case 'regPassword':
 		pattern = new RegExp('^[a-zA-Z0-9]{6,45}$', '');
 		break;
 
@@ -22,17 +22,31 @@ function checkEnteredData(inputID) {
 		pattern = new RegExp('^[a-zA-Zа-яА-ЯёЁ ]+$', '');
 		break;
 
+	case 'shipAddress':
+		pattern = new RegExp('^.+$', '');
+		break;
+
 	case 'age':
-		pattern = new RegExp('^[0-9]{0,3}$', '');
+		pattern = new RegExp('^[0-9]{1,3}$', '');
 		break;
 
 	}
 
-	inputStr = document.getElementById(inputID + 'Data').value;
+	var inputStr = document.getElementById(inputID + 'Data').value;
 
 	if (pattern.test(inputStr)) {
-		document.getElementById(inputID).style.color = 'green';
+		setSuccesAttributes(inputID);
 	} else {
-		document.getElementById(inputID).style.color = 'red';
+		setErrorAttributes(inputID);
 	}
+}
+
+function setErrorAttributes(inputID) {
+	document.getElementById(inputID).setAttribute("class", "form-group has-error has-feedback");
+	document.getElementById(inputID + 'Icon').setAttribute("class", "glyphicon glyphicon-remove form-control-feedback");
+}
+
+function setSuccesAttributes(inputID) {
+	document.getElementById(inputID).setAttribute("class", "form-group has-success has-feedback");
+	document.getElementById(inputID + 'Icon').setAttribute("class", "glyphicon glyphicon-ok form-control-feedback");
 }
