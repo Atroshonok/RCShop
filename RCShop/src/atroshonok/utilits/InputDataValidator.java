@@ -18,7 +18,7 @@ public class InputDataValidator {
 	private static final Pattern EMAIL_PATTERN = Pattern.compile("^[a-zA-Z0-9.]+@[a-zA-Z0-9]+\\.[a-zA-Z]+$");
 	private static final Pattern FIRSTNAME_PATTERN = Pattern.compile("^[a-zA-Zа-яА-ЯёЁ ]+$");
 	private static final Pattern LASTNAME_PATTERN = Pattern.compile("^[a-zA-Zа-яА-ЯёЁ ]+$");
-	private static final Pattern AGE_PATTERN = Pattern.compile("^[0-9]{0,3}$");
+	private static final Pattern AGE_PATTERN = Pattern.compile("^[0-9]{1,3}$");
 
 	public static boolean validateLogin(CharSequence inputData) {
 		Matcher matcher = LOGIN_PATTERN.matcher(inputData);
