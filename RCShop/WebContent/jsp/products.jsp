@@ -18,7 +18,7 @@
 	<div class="body">
 		<div class="leftPart" >
 			<c:import url="/jsp/fragment/usergadget.jsp" /><br/>
-			<hr/>
+			
 			<c:import url="/jsp/fragment/navbar.jsp" />
 			<c:if test="${sessionScope.userType eq 'ADMIN'}">
 				<hr/>
@@ -31,10 +31,8 @@
 		<%--	${productAddedMessage}<br/> --%>
 			<c:import url="/jsp/fragment/productslist.jsp" />
 		</div>
-	
 	</div>
-	<hr/>
-	<c:import url="/jsp/fragment/footer.jsp" />
 </div>
+<c:import url="/jsp/fragment/footer.jsp" />
 </body>
 </html>
