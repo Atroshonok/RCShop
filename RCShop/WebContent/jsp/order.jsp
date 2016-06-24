@@ -22,7 +22,11 @@
 			<c:import url="/jsp/fragment/navbar.jsp" />
 		</div>	
 		<div class="rigthPart">
-			<c:out value="${orderInfoMessage}" />
+			<c:if test="${orderInfoMessage ne null}">
+				<div class="alert alert-success" role="alert">
+					${orderInfoMessage}	
+				</div>
+			</c:if>
 		</div>
 	</div>
 </div>

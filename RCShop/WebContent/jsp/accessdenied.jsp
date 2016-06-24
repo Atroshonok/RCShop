@@ -22,7 +22,11 @@
 			<c:import url="/jsp/fragment/navbar.jsp" />
 		</div>	
 		<div class="rigthPart">
-			${sessionScope.errorAccessMessage}<br/>
+			<c:if test="${sessionScope.errorAccessMessage ne null}">
+				<div class="alert alert-danger" role="alert">
+					${sessionScope.errorAccessMessage}	
+				</div>
+			</c:if>
 		</div>
 	</div>
 </div>

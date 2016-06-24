@@ -22,7 +22,11 @@
 			<c:import url="/jsp/fragment/navbar.jsp" />
 		</div>	
 		<div class="rigthPart">
-			${noOrdersMassage}<br/>	
+			<c:if test="${noOrdersMassage ne null}">
+				<div class="alert alert-info" role="alert">
+					${noOrdersMassage}	
+				</div>
+			</c:if>
 			<c:if test="${orders.size() gt '0'}">
 				<c:import url="/jsp/fragment/userorders.jsp" />
 			</c:if>

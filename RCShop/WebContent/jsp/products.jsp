@@ -20,15 +20,8 @@
 			<c:import url="/jsp/fragment/usergadget.jsp" /><br/>
 			
 			<c:import url="/jsp/fragment/navbar.jsp" />
-			<c:if test="${sessionScope.userType eq 'ADMIN'}">
-				<hr/>
-				<i>Only for Administrator</i>
-				<hr/>
-				<c:import url="/jsp/fragment/adminsidebar.jsp" />
-			</c:if>
 		</div>	
 		<div class="rigthPart">
-		<%--	${productAddedMessage}<br/> --%>
 			<c:import url="/jsp/fragment/productslist.jsp" />
 		</div>
 	</div>

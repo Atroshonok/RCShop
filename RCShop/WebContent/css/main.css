@@ -36,3 +36,7 @@ body {
 	text-align: center;
 	color: white;
 }
+
+#addProductForm div.col-xs-2, #registrForm div.col-xs-2, #editProductForm div.col-xs-2 {
+	text-align: right;
+}

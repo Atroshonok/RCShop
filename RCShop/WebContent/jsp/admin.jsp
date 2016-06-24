@@ -20,15 +20,13 @@
 			<c:import url="/jsp/fragment/usergadget.jsp" /><br/>
 			
 			<c:import url="/jsp/fragment/navbar.jsp" />
-			<c:if test="${sessionScope.userType eq 'ADMIN'}">
-				<hr/>
-				<i>Only for Administrator</i>
-				<hr/>
-				<c:import url="/jsp/fragment/adminsidebar.jsp" />
-			</c:if>
 		</div>	
 		<div class="rigthPart">
-			${adminInfoMessage}<br/>
+			<c:if test="${adminInfoMessage ne null}">
+				<div class="alert alert-info" role="alert">
+					${adminInfoMessage}	
+				</div>
+			</c:if>
 			<c:import url="/jsp/fragment${fragmentPath}" />
 		</div>
 	</div>

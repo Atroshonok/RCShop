@@ -1,12 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <script type="text/javascript" src="js/form_validation.js" ></script>
-<style type="text/css">
-	div.col-xs-2 {
-		text-align: right;
-	}
-</style>
 
-<div class="registrForm">
+<div id="registrForm">
 	<form class="form-horizontal" action="controller" method="POST" title="Registration form" >
 		<input type="hidden" name="command" value="registration" />
 		<h3>Registration form</h3><br/>
